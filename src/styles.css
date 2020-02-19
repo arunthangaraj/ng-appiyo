@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.container .form-group {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.form-group input {
+    border: none;
+    border-bottom: 1px solid #a7a4a4;
+}
+
+.form-group label {
+    padding: 0 10px;
+}
+
+button {
+    margin: 0 10px;
+    background: #0d81e4ed;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: transparent;
+    color: #fff;
+}
+
+button:hover {
+    background: #3F51B5;
+    color: #fff;
+}
+
+

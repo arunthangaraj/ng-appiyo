@@ -1,0 +1,34 @@
+<div class="container">
+  
+  <form [formGroup]="addressForm" autocomplete="off">
+      <h3>Please Enter Address Details</h3>
+      <div class="form-group">
+          <label for="addressLine1">
+              Address line 1:
+              
+          </label>
+          <input id="addressLine1" formControlName="line1">
+      </div>
+      <div class="form-group">
+          <label for="addressLine2">
+              Address Line 2:
+              
+          </label>
+          <input id="addressLine2" formControlName="line2">
+      </div>
+      <div class="form-group">
+          <label for="pincode">
+              Pincode:
+              
+          </label>
+          <input id="pincode" formControlName="pincode">
+      </div>
+     <div class="form-group">
+       <label class="type">Select Address Type</label>
+       <select (change)="onChange($event.target.value)">
+       <option *ngFor="let type of types" [value]="type.id">{{type.name}}</option>
+       </select>
+     </div>
+      <button (click)="onSubmit()" [disabled]="addressForm.invalid">Submit</button>
+  </form>
+</div>

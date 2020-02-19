@@ -1,0 +1,36 @@
+
+<div class="container">
+  <form [formGroup]="applicantForm" autocomplete="off">
+    <h3>Please Enter Applicant Details</h3>
+      <div class="form-group">
+          <label for="loanType">
+              First Name:
+              
+          </label>
+          <input id="loanType" formControlName="firstName">
+      </div>
+      <div class="form-group">
+          <label for="loanCategory">
+              Middle Name:
+              
+          </label>
+          <input id="middleName" formControlName="middleName">
+      </div>
+      <div class="form-group">
+          <label for="loanAmount">
+              Last Name:
+              
+          </label>
+          <input id="lastName" formControlName="lastName">
+      </div>
+      <div class="form-group">
+        <label for="loanAmount">
+            Mobile:
+            
+        </label>
+        <input id="mobile" formControlName="mobile">
+    </div>
+    
+      <button (click)="onSubmit()" [disabled]="applicantForm.invalid">Submit</button>
+  </form>
+</div>

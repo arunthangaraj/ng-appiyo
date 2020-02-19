@@ -1,0 +1,28 @@
+<div class="container">
+  
+    <form [formGroup]="loanForm" autocomplete="off">
+        <h3>Please Enter Loan Details</h3>
+        <div class="form-group">
+            <label for="loanType">
+                Loan Type:
+                
+            </label>
+            <input id="loanType" formControlName="loanType">
+        </div>
+        <div class="form-group">
+            <label for="loanCategory">
+                Loan Category:
+                
+            </label>
+            <input id="loanCategory" formControlName="loanCategory">
+        </div>
+        <div class="form-group">
+            <label for="loanAmount">
+                Loan Amount:
+                
+            </label>
+            <input id="loanAmount" formControlName="loanAmount">
+        </div>
+        <button (click)="onSubmit()" [disabled]="loanForm.invalid">Submit</button>
+    </form>
+</div>
